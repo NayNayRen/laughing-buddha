@@ -1,0 +1,289 @@
+/* MOVEMENTS */
+@keyframes moveRight {
+  0%{
+    left: -50%;
+  }
+  100%{
+    left: 50%;
+  }
+}
+.moveRight{
+  animation: moveRight 1.5s;
+}
+#name_move_right, #number_move_right{
+  left: -50%;
+  position: relative;
+  transform: translate(-50%, 0);
+}
+
+@keyframes moveLeft {
+  0%{
+    right: -50%;
+  }
+  100%{
+    right: 50%;
+  }
+}
+.moveLeft{
+  animation: moveLeft 1.5s;
+}
+#email_move_left, #party_move_left{
+  position: relative;
+  right: -50%;
+  transform: translate(50%, 0);
+}
+
+/* HTML AND CLASS STYLES */
+.alert_box{
+  background: #C0C0C0;
+  border: solid 3px white;
+  border-radius: 5px;
+  box-shadow: inset 5px 5px 20px rgba(0, 0, 0, 0.5), inset -5px -5px 20px rgba(0, 0, 0, 0.5);
+  color: yellow;
+  display: none;
+  left: 50%;
+  padding: 25px 20px;
+  position: absolute;
+  text-align: center;
+  text-shadow: 0 3px 5px rgba(0,0,0,0.5);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  z-index: 1;
+}
+
+.alert_box button{
+  border: solid 2px black;
+}
+
+.alert_box h2{
+  color: white;
+}
+
+.alert_box h3{
+  border-bottom: solid 2px black;
+  color: darkgreen;
+  letter-spacing: 2px;
+  margin-top: -25px;
+  text-align: center;
+}
+
+.alert_box li{
+  font-weight: bold;
+  list-style-type: none;
+}
+
+.alert_box ul{
+  font-size: 22px;
+  text-align: left;
+}
+
+.alert_box span{
+  color: black;
+  font-weight: normal;
+}
+
+body{
+  background: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('../images/laughing_buddha.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Titillium Web', sans-serif;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+
+.button{
+  background: darkgreen;
+  border-radius: 2px;
+  border: solid 2px white;
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 10px 0 10px;/* top right bottom left */
+  width: 160px;
+  padding: 10px;
+  text-shadow: 0 8px 5px rgba(0,0,0,0.5);
+  transition: background 250ms ease;
+}
+
+.button:hover{
+  background: seagreen;
+  cursor: pointer;
+}
+.checkbox_label{
+  background-color: seagreen;
+  border-left: solid 2px white;
+  border-right: solid 2px white;
+  border-bottom: solid 2px white;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 8px 8px 0 rgba(0,0,0,0.5);
+  width: 156px;
+  position: absolute;
+  text-align: center;
+  transform: translate(-50%, 0);
+  top: 0;
+}
+
+.comments{
+  background-color: black;
+  border-radius: 5px;
+  color: white;
+  padding: 8px;
+  max-width: 800px;
+}
+
+.comp_name, .greeting{
+  color: white;
+  font-size: 50px;
+  position: absolute;
+}
+
+.comp_slogan{
+  color: yellow;
+  font-style: italic;
+  font-size: 30px;
+  left: 130px;
+  position: absolute;
+  top: 65px;
+}
+
+.courtesy{
+  bottom: 0;
+  color: yellow;
+  font-style: italic;
+  font-size: 17px;
+  position: absolute;
+  right: 35px;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .button{
+  background: seagreen;
+  border-radius: 3px 3px 0 0;
+  border-bottom: none;
+  transition: background 250ms ease;
+}
+
+.dropdown:hover .dropdown_content{
+  display: block;
+}
+
+.dropdown_content{
+  display: none;
+  left: 50%;
+  position: absolute;
+  z-index: 1;
+}
+
+.header {
+  border-bottom: solid 2px darkgreen;
+  height: 100px;
+  left: 50%;
+  margin-bottom: 50px;
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 96%;
+}
+
+.greeting{
+  right: 0;
+}
+
+.info{
+  background-color: black;
+  border: solid 1px white;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  height: 20px;
+  margin-bottom: 15px;
+  padding: 8px;
+  position: relative;
+  min-width: 400px;
+}
+
+.info_pics{
+  background-color: darkgreen;
+  background-position: center;
+  border-radius: 50%;
+  height: 35px;
+  margin-left: 10px;
+  padding: 4px;
+  position: absolute;
+  width: 35px;
+}
+
+.main{
+  border-bottom: solid 2px darkgreen;
+  min-height: 700px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+}
+
+.text{
+  color: white;
+  font-size: 22px;
+  line-height: 25px;
+  margin: 20px auto;
+  max-width: 80%;
+  text-shadow: 0 5px 10px rgba(0,0,0,0.75);
+}
+
+@media(max-width: 700px) {
+  .alert_box{
+    width: 400px;
+  }
+  .alert_box ul{
+    font-size: 20px;
+  }
+  body{
+    display: inline-block;
+  }
+  .button{
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  .checkbox_label{
+    top: -2px;
+  }
+  .comments{
+    margin-bottom: 0;
+    max-width: 400px;
+  }
+  .comp_name, .greeting{
+    font-size: 30px;
+  }
+  .comp_slogan{
+    font-size: 20px;
+    left: 35px;
+    top: 40px;
+  }
+  .courtesy{
+    right: 10px;
+  }
+  .header{
+    height: 65px;
+    margin-bottom: 0;
+    width: 96%;
+  }
+  .info{
+    min-width: 250px;
+  }
+  .main{
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+  .text{
+    font-size: 18px;
+  }
+}

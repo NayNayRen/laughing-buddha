@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+  <title>Reserve A Table</title>
+</head>
+
+<body id="body">
+  <div id="header" class="header">
+    <span class="comp_name">Laughing Buddha</span>
+    <span class="comp_slogan">We giggle if you rub our belly.</span>
+    <span class="greeting">Come Join Us</span>
+  </div>
+  <div id="alert_box" class="alert_box">
+    <h2>Laughing Buddha</h2>
+    <h3>Reservation Confirmation</h3>
+    <ul>
+      <li>Name - <span id="name_display"></span></li>
+      <li>E-mail - <span id="email_display"></span></li>
+      <li>Phone - <span id="phone_display"></span></li>
+      <li>Party Of - <span id="party_display"></span></li>
+      <li>Occasion - <span id="occasion_display"></span></li>
+      <li>Comments - <span id="comments_display"></span></li>
+    </ul>
+    <button id="close_alert" class="button">Close</button>
+  </div>
+  <!-- START OF MAIN -->
+  <div id="main" class="main">
+    <p class="text">Make a reservation to join us for dinner. Leave us your name, e-mail, phone number, and party information.
+      Please fill out all areas of information for an accurate reservartion.</p>
+    <!-- START OF FORM -->
+    <form action="" id="reservation_form">
+      <div id="name_move_right">
+        <input id="name" class="info" type="text" name="first" value="" placeholder="Name" required autofocus>
+        <img class="info_pics" src="images/ninja.png" alt="Ninja">
+      </div>
+      <div id="email_move_left">
+        <input id="email" class="info" type="email" name="email" value="" placeholder="E-mail" required>
+        <img class="info_pics" src="images/mail.png" alt="E-mail">
+      </div>
+      <div id="number_move_right">
+        <input id="number" class="info" type="number" name="phone" value="" placeholder="Phone Number" required>
+        <img class="info_pics" src="images/phone.png" alt="Phone">
+      </div>
+      <div id="party_move_left">
+        <input id="party" class="info" type="number" name="party" value="" placeholder="Number in Party" required>
+        <img class="info_pics" src="images/hand.png" alt="Party">
+      </div>
+      <div class="dropdown">
+        <button class="button" type="button" name="button">Birthday</button>
+        <div class="dropdown_content">
+          <label class="checkbox_label">
+            <input id="birthday_yes" type="radio" name="bd_selection" value="Yes"><span class="checkbox_custom">Yes</span>
+            <input id="birthday_no" type="radio" name="bd_selection" value="No" checked><span class="checkbox_custom">No</span>
+          </label>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="button" type="button" name="button">Anniversary</button>
+        <div class="dropdown_content">
+          <label class="checkbox_label">
+            <input id="anniversary_yes" type="radio" name="ann_selection" value="Yes"><span class="checkbox_custom">Yes</span>
+            <input id="anniversary_no" type="radio" name="ann_selection" value="No" checked><span class="checkbox_custom">No</span>
+          </label>
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="button" type="button" name="button">Graduation</button>
+        <div class="dropdown_content">
+          <label class="checkbox_label">
+            <input id="graduation_yes" type="radio" name="grad_selection" value="Yes"><span class="checkbox_custom">Yes</span>
+            <input id="graduation_no" type="radio" name="grad_selection" value="No" checked><span class="checkbox_custom">No</span>
+          </label>
+        </div>
+      </div><br>
+      <p class="text">If you have any special requests, i.e. wheelchair access, highchair, or table specifics, please explain and we will do
+         our best to accomodate.</p>
+      <textarea id="comments" class="comments" name="name" rows="5" cols="60" placeholder="Notes or Comments"></textarea><br>
+      <div class="button_grid">
+        <input id="reserve" class="button" type="submit" value="Reserve"></input>
+        <input id="reset" class="button" type="reset" value="Reset"></input>
+        <input id="cancel" class="button" type="reset" value="Cancel"></input>
+      </div>
+    </form><!-- END OF FORM -->
+  </div><!-- END OF MAIN -->
+  <span class="courtesy">Design courtesy of NayNayRen&copy;</span>
+  <script src="scripts/movements.js" charset="utf-8"></script>
+  <script src="scripts/validations.js" charset="utf-8"></script>
+  <script src="scripts/formats.js" charset="utf-8"></script>
+</body>
+
+</html>
