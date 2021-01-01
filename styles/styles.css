@@ -105,13 +105,15 @@ body{
   margin: 10px 10px 0 10px;/* top right bottom left */
   width: 160px;
   padding: 10px;
-  text-shadow: 0 8px 5px rgba(0,0,0,0.5);
+  text-shadow: 0 2px 5px rgba(0,0,0,0.5);
   transition: background 250ms ease;
 }
-
 .button:hover{
   background: seagreen;
   cursor: pointer;
+}
+.button:focus{
+  outline: none;
 }
 .checkbox_label{
   background-color: seagreen;
@@ -257,6 +259,7 @@ body{
   }
   .checkbox_label{
     top: -2px;
+    width: 96px;
   }
   .comments{
     width: 250px;
