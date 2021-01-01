@@ -5,7 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="styles/styles.css">
   <title>Reserve A Table</title>
 </head>
@@ -34,22 +35,22 @@
     <p class="text">Make a reservation to join us for dinner. Leave us your name, e-mail, phone number, and party information.
       Please fill out all areas of information for an accurate reservartion.</p>
     <!-- START OF FORM -->
-    <form action="" id="reservation_form">
+    <form id="reservation_form">
       <div id="name_move_right">
         <input id="name" class="info" type="text" name="first" value="" placeholder="Name" required autofocus>
-        <img class="info_pics" src="images/ninja.png" alt="Ninja">
+        <i class="info_pics fa fa-user" alt="Ninja"></i>
       </div>
       <div id="email_move_left">
         <input id="email" class="info" type="email" name="email" value="" placeholder="E-mail" required>
-        <img class="info_pics" src="images/mail.png" alt="E-mail">
+        <i class="info_pics fa fa-envelope" alt="E-mail"></i>
       </div>
       <div id="number_move_right">
         <input id="number" class="info" type="number" name="phone" value="" placeholder="Phone Number" required>
-        <img class="info_pics" src="images/phone.png" alt="Phone">
+        <i class="info_pics fa fa-phone" alt="Phone"></i>
       </div>
       <div id="party_move_left">
         <input id="party" class="info" type="number" name="party" value="" placeholder="Number in Party" required>
-        <img class="info_pics" src="images/hand.png" alt="Party">
+        <i class="info_pics fa fa-users" alt="Party"></i>
       </div>
       <div class="dropdown">
         <button class="button" type="button" name="button">Birthday</button>
@@ -80,7 +81,7 @@
       </div><br>
       <p class="text">If you have any special requests, i.e. wheelchair access, highchair, or table specifics, please explain and we will do
          our best to accomodate.</p>
-      <textarea id="comments" class="comments" name="name" rows="5" cols="60" placeholder="Notes or Comments"></textarea><br>
+      <textarea id="comments" class="comments" name="name" placeholder="Notes or Comments"></textarea><br>
       <div class="button_grid">
         <input id="reserve" class="button" type="submit" value="Reserve"></input>
         <input id="reset" class="button" type="reset" value="Reset"></input>
@@ -88,7 +89,7 @@
       </div>
     </form><!-- END OF FORM -->
   </div><!-- END OF MAIN -->
-  <span class="courtesy">Design courtesy of NayNayRen&copy;</span>
+  <footer class="courtesy">Design courtesy of NayNayRen&copy;</footer>
   <script src="scripts/movements.js" charset="utf-8"></script>
   <script src="scripts/validations.js" charset="utf-8"></script>
   <script src="scripts/formats.js" charset="utf-8"></script>
