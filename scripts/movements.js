@@ -1,6 +1,5 @@
 /* MOVE INPUT FIELDS ON PAGE LOAD */
 function init() {
-  'use strict';
 
   const name_move_right = document.getElementById('name_move_right');
   const number_move_right = document.getElementById('number_move_right');

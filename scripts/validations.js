@@ -1,6 +1,5 @@
 /* ACCEPTS, CHECKS, AND DISPLAYS INFORMATION ENTERED BY THE USER FROM THE FORM */
 function submitReservation() {
-  'use strict';
 
   const blank = '';
   const name = document.getElementById('name').value;
