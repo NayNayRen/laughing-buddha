@@ -20,7 +20,6 @@
     </div>
   </header>
   <div id="alert_box" class="alert_box">
-    <h2>Laughing Buddha</h2>
     <h3>Reservation Confirmation</h3>
     <ul>
       <li>Name - <span id="name_display"></span></li>
@@ -41,19 +40,27 @@
     <form id="reservation_form">
       <div id="name_move_right">
         <input id="name" class="info" type="text" name="first" value="" placeholder="Name" required autofocus>
-        <i class="info_pics fa fa-user" alt="Ninja"></i>
+        <div class="info_pics">
+          <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
       </div>
       <div id="email_move_left">
         <input id="email" class="info" type="email" name="email" value="" placeholder="E-mail" required>
-        <i class="info_pics fa fa-envelope" alt="E-mail"></i>
+        <div class="info_pics">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+        </div>
       </div>
       <div id="number_move_right">
         <input id="number" class="info" type="number" name="phone" value="" placeholder="Phone Number" required>
-        <i class="info_pics fa fa-phone" alt="Phone"></i>
+        <div class="info_pics">
+          <i class="fa fa-phone" aria-hidden="true"></i>
+        </div>
       </div>
       <div id="party_move_left">
         <input id="party" class="info" type="number" name="party" value="" placeholder="Number in Party" required>
-        <i class="info_pics fa fa-users" alt="Party"></i>
+        <div class="info_pics">
+          <i class="fa fa-users" aria-hidden="true"></i>
+        </div>
       </div>
       <div class="dropdown">
         <button class="button" type="button" name="button">Birthday</button>

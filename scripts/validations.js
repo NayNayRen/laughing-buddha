@@ -26,31 +26,42 @@ function submitReservation() {
   }
 
   /* PERFORMS CHECKS ON ALL INFORMATION ENTERED */
-  if (birthday_yes.checked == true) {// Validates if yes is checked
+  // Validates if yes is checked
+  if (birthday_yes.checked === true) {
     reservation_info.occasion[0] = 'Yes Birthday';
-  } else if (birthday_no.checked == true) {// Validates if no is checked
+    // Validates if no is checked
+  } else if (birthday_no.checked === true) {
     reservation_info.occasion[0] = 'No Birthday';
   }
-  if (anniversary_yes.checked == true) {// Validates if yes is checked
+  // Validates if yes is checked
+  if (anniversary_yes.checked === true) {
     reservation_info.occasion[1] = ' Yes Anniversary';
-  } else if (anniversary_no.checked == true) {// Validates if no is checked
+    // Validates if no is checked
+  } else if (anniversary_no.checked === true) {
     reservation_info.occasion[1] = ' No Anniversary';
   }
-  if (graduation_yes.checked == true) {// Validates if yes is checked
+  // Validates if yes is checked
+  if (graduation_yes.checked === true) {
     reservation_info.occasion[2] = ' Yes Graduation';
-  } else if (graduation_no.checked == true) {// Validates if no is checked
+    // Validates if no is checked
+  } else if (graduation_no.checked === true) {
     reservation_info.occasion[2] = ' No Graduation';
   }
-  if (birthday_no.checked == true && anniversary_no.checked == true && graduation_no.checked == true) {// Validates if all no is checked
-    reservation_info.occasion[0] = 'There are no special occasions.';// Inserts response instead of all three nos
-    reservation_info.occasion.pop(reservation_info.occasion[1]);// Removes anniversary response
-    reservation_info.occasion.pop(reservation_info.occasion[2]);// Removes graduation response
+  // Validates if all no is checked
+  if (birthday_no.checked === true && anniversary_no.checked === true && graduation_no.checked == true) {
+    // Inserts response instead of all three nos
+    reservation_info.occasion[0] = 'There are no special occasions.';
+    // Removes anniversary response
+    reservation_info.occasion.pop(reservation_info.occasion[1]);
+    // Removes graduation response
+    reservation_info.occasion.pop(reservation_info.occasion[2]);
   }
-  if (party == '0' || party == blank) {// Validates if party is empty
+  // Validates if party is empty
+  if (party == '0' || party == blank) {
     alert('You must have at least one person in your party.');
     return false;
   }
-  if(comments == blank){
+  if (comments == blank) {
     reservation_info.comments = 'There are no special comments.';
   }
 
@@ -62,13 +73,10 @@ function submitReservation() {
   document.getElementById('party_display').innerHTML = `${reservation_info.party}`;
   document.getElementById('occasion_display').innerHTML = `${reservation_info.occasion}`;
   document.getElementById('comments_display').innerHTML = `${reservation_info.comments}`;
-  document.getElementById('main').style.opacity = '.25';
-  document.getElementById('header').style.opacity = '.25';
 
-  document.getElementById('close_alert').addEventListener('click', function(){// Closes alert box
-  document.getElementById('alert_box').style.display = 'none';
-  document.getElementById('main').style.opacity = '1';
-  document.getElementById('header').style.opacity = '1';
+  // Closes alert box
+  document.getElementById('close_alert').addEventListener('click', function () {
+    document.getElementById('alert_box').style.display = 'none';
   });
   return false;
 }
