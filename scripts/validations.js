@@ -16,6 +16,7 @@ function submitReservation() {
   const graduation_no = document.getElementById('graduation_no');
   const comments = document.getElementById('comments').value;
   const comments_capitalized = capitalizeComments(comments);
+  const overlay = document.querySelector('.overlay');
   const reservation_info = {
     name: name_capitalized,
     email: email,
@@ -50,7 +51,7 @@ function submitReservation() {
   // Validates if all no is checked
   if (birthday_no.checked === true && anniversary_no.checked === true && graduation_no.checked == true) {
     // Inserts response instead of all three nos
-    reservation_info.occasion[0] = 'There are no special occasions.';
+    reservation_info.occasion[0] = 'No special occasions.';
     // Removes anniversary response
     reservation_info.occasion.pop(reservation_info.occasion[1]);
     // Removes graduation response
@@ -58,14 +59,16 @@ function submitReservation() {
   }
   // Validates if party is empty
   if (party == '0' || party == blank) {
-    alert('You must have at least one person in your party.');
+    alert('At least one person in your party.');
     return false;
   }
   if (comments == blank) {
-    reservation_info.comments = 'There are no special comments.';
+    reservation_info.comments = 'No special comments.';
   }
 
   /* ADDS ALL USER ENTERED INFO INTO THE ALERT BOX */
+  // document.getElementById('alert_box').style.left = '50%';
+  // document.getElementById('alert_box').style.transform = 'translateX(-50%)';
   document.getElementById('alert_box').style.display = 'block';
   document.getElementById('name_display').innerHTML = `${reservation_info.name}`;
   document.getElementById('email_display').innerHTML = `${reservation_info.email}`;
@@ -73,10 +76,14 @@ function submitReservation() {
   document.getElementById('party_display').innerHTML = `${reservation_info.party}`;
   document.getElementById('occasion_display').innerHTML = `${reservation_info.occasion}`;
   document.getElementById('comments_display').innerHTML = `${reservation_info.comments}`;
+  overlay.style.width = '100%';
 
   // Closes alert box
   document.getElementById('close_alert').addEventListener('click', function () {
     document.getElementById('alert_box').style.display = 'none';
+    // document.getElementById('alert_box').style.left = '100%';
+    // document.getElementById('alert_box').style.transform = 'translateX(0)';
+    overlay.style.width = '0';
   });
   return false;
 }
