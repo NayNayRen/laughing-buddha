@@ -25,7 +25,8 @@
   animation: moveRight 1.5s;
 }
 
-#name_move_right, #number_move_right {
+#name_move_right,
+#number_move_right {
   -webkit-transform: translate(-50%, 0);
   left: -50%;
   position: relative;
@@ -37,7 +38,8 @@
   animation: moveLeft 1.5s;
 }
 
-#email_move_left, #party_move_left {
+#email_move_left,
+#party_move_left {
   -webkit-transform: translate(50%, 0);
   position: relative;
   right: -50%;
@@ -94,16 +96,11 @@
 
 body {
   background-attachment: fixed;
-  background-image: -o-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('../images/laughing_buddha.jpeg');
   background-image: -webkit-linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('../images/laughing_buddha.jpeg');
   background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.5)), url('../images/laughing_buddha.jpeg');
   background-position: center;
   background-size: cover;
   font-family: 'Titillium Web', sans-serif;
-  height: 100%;
-  margin: 0;
-  overflow-x: hidden;
-  padding: 0;
 }
 
 .button {
@@ -149,17 +146,15 @@ body {
 
 .comp_name {
   color: #fff;
+  display: block;
   font-size: 50px;
-  margin-top: 0;
+  /* outline: solid 1px blue; */
 }
 
 .comp_slogan {
-  bottom: 0;
   color: #AFA63E;
   font-size: 30px;
   font-style: italic;
-  left: 130px;
-  position: absolute;
 }
 
 .dropdown {
@@ -187,32 +182,39 @@ body {
 
 footer {
   background-color: #000;
-  border-top: solid 2px #719F38;
+  border-top: solid 1px #719F38;
   color: #AFA63E;
   font-size: 18px;
-  padding: 5px 0 0 5px;
+  padding: 10px;
 }
 
-.greeting {
-  bottom: 0;
-  color: #fff;
-  font-size: 35px;
-  position: absolute;
-  right: 10px;
+.footer-logo {
+  width: 50px;
 }
 
-.header {
-  border-bottom: solid 2px #719F38;
-  padding-left: 5px;
-  position: relative;
-}
-
-html {
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  scroll-behavior: smooth;
+.footer-logo img {
+  height: auto;
   width: 100%;
+}
+
+form {
+  height: auto;
+  width: 700px;
+}
+
+header {
+  border-bottom: solid 1px #719F38;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  /* position: relative; */
+}
+
+header div {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .info {
@@ -238,7 +240,7 @@ html {
   width: 35px;
 }
 
-.main {
+main {
   -ms-flex-direction: column;
   -ms-flex-pack: center;
   -webkit-box-direction: normal;
@@ -289,17 +291,12 @@ html {
 
   .comp_name {
     font-size: 30px;
-    margin-top: 0;
   }
 
   .comp_slogan {
     font-size: 25px;
-    left: 75px;
   }
 
-  .greeting {
-    font-size: 25px;
-  }
 
   .info {
     font-size: 15px;
@@ -346,7 +343,7 @@ html {
   }
 
   .comp_name {
-    font-size: 25px;
+    font-size: 24px;
   }
 
   .comp_slogan {
@@ -358,7 +355,11 @@ html {
     margin-top: 15px;
   }
 
-  .greeting{
+  form {
+    width: 100%;
+  }
+
+  .greeting {
     font-size: 20px;
     right: 5px;
   }
@@ -377,21 +378,7 @@ html {
   }
 }
 
-@media(max-width: 400px){
-
-  .comp_name {
-    font-size: 22px;
-  }
-
-  .comp_slogan {
-    font-size: 14px;
-    left: 5px;
-  }
-
-  .greeting{
-    font-size: 16px;
-    right: 5px;
-  }
+@media(max-width: 400px) {
 
   .info_pics {
     display: none;
