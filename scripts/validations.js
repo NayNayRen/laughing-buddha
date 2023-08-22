@@ -67,9 +67,7 @@ function submitReservation() {
   }
 
   /* ADDS ALL USER ENTERED INFO INTO THE ALERT BOX */
-  // document.getElementById('alert_box').style.left = '50%';
-  // document.getElementById('alert_box').style.transform = 'translateX(-50%)';
-  document.getElementById('alert_box').style.display = 'block';
+  document.getElementById('alert_box').style.top = '75px';
   document.getElementById('name_display').innerHTML = `${reservation_info.name}`;
   document.getElementById('email_display').innerHTML = `${reservation_info.email}`;
   document.getElementById('phone_display').innerHTML = `${reservation_info.number}`;
@@ -80,9 +78,7 @@ function submitReservation() {
 
   // Closes alert box
   document.getElementById('close_alert').addEventListener('click', function () {
-    document.getElementById('alert_box').style.display = 'none';
-    // document.getElementById('alert_box').style.left = '100%';
-    // document.getElementById('alert_box').style.transform = 'translateX(0)';
+    document.getElementById('alert_box').style.top = '-50%';
     overlay.style.width = '0';
   });
   return false;
